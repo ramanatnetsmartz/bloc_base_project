@@ -6,6 +6,7 @@ import '../../bloc/theme/theme_bloc.dart';
 import '../../localization/app_localization.dart';
 
 class SettingsScreen extends StatelessWidget {
+  const SettingsScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,9 +19,6 @@ class SettingsScreen extends StatelessWidget {
             Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: BlocBuilder<LocaleCubit, ChangeLocaleState>(
-                  /*listener: (context, state) {
-                    //Navigator.of(context).pop();
-                  },*/
                   builder: (context, state) {
                     return DropdownButton<String>(
                       value: state.locale.languageCode,
